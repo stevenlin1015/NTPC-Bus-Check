@@ -37,9 +37,9 @@ class WelcomeViewController: UIViewController, PaperOnboardingDataSource, PaperO
         let descriptionFont = UIFont(name: "AvenirNext-Regular", size: 18)!
         
         return [
-            (UIImage(named: "rocket")!, "效率，快、狠、準！", "為iOS裝置進行優化，讓使用體驗更上一層樓。", UIImage(named: "rocket")!, backgroundColorOne, UIColor.white, UIColor.white, titleFont, descriptionFont),
-            (UIImage(named: "notification")!, "隨時掌握最新消息", "開啟通知提醒，資料一手掌握不間斷。", UIImage(named: "notification")!, backgroundColorTwo, UIColor.white, UIColor.white, titleFont, descriptionFont),
-            (UIImage(named: "brush")!, "換介面，換心情！", "App提供使用者多種客製化介面，舒適閱讀不求人！", UIImage(named: "brush")!, backgroundColorThree, UIColor.white, UIColor.white, titleFont, descriptionFont)
+            (UIImage(named: "rocket")!, "效率，快、狠、準！", "為iOS裝置進行優化，讓使用體驗更上一層樓。", UIImage(), backgroundColorOne, UIColor.white, UIColor.white, titleFont, descriptionFont),
+            (UIImage(named: "notification")!, "隨時掌握最新消息", "開啟通知提醒，資料一手掌握不間斷。", UIImage(), backgroundColorTwo, UIColor.white, UIColor.white, titleFont, descriptionFont),
+            (UIImage(named: "brush")!, "換介面，換心情！", "App提供使用者多種客製化介面，舒適閱讀不求人！", UIImage(), backgroundColorThree, UIColor.white, UIColor.white, titleFont, descriptionFont)
             ][index]
     }
     func onboardingItemsCount() -> Int {
