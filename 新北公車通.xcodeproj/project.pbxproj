@@ -7,21 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3833C641FC1A6CD0032590F /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3833C631FC1A6CD0032590F /* PaperOnboarding.framework */; };
+		B3833C651FC1A6CD0032590F /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3833C631FC1A6CD0032590F /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3833C671FC1A7410032590F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3833C661FC1A7410032590F /* WelcomeViewController.swift */; };
+		B3833C691FC1A77D0032590F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3833C681FC1A77D0032590F /* OnboardingView.swift */; };
 		B3A48CC11FBFEE81005E1E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A48CC01FBFEE81005E1E19 /* AppDelegate.swift */; };
-		B3A48CC31FBFEE81005E1E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A48CC21FBFEE81005E1E19 /* ViewController.swift */; };
 		B3A48CC61FBFEE81005E1E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A48CC41FBFEE81005E1E19 /* Main.storyboard */; };
 		B3A48CC81FBFEE81005E1E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A48CC71FBFEE81005E1E19 /* Assets.xcassets */; };
 		B3A48CCB1FBFEE81005E1E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A48CC91FBFEE81005E1E19 /* LaunchScreen.storyboard */; };
+		B3A48CD51FC061C1005E1E19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A48CD41FC061C1005E1E19 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B3833C5A1FC1A1BB0032590F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3833C651FC1A6CD0032590F /* PaperOnboarding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B3833C631FC1A6CD0032590F /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/PaperOnboarding.framework; sourceTree = "<group>"; };
+		B3833C661FC1A7410032590F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B3833C681FC1A77D0032590F /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B3A48CBD1FBFEE81005E1E19 /* 新北公車通.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新北公車通.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A48CC01FBFEE81005E1E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3A48CC21FBFEE81005E1E19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3A48CC51FBFEE81005E1E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3A48CC71FBFEE81005E1E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3A48CCA1FBFEE81005E1E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A48CCC1FBFEE81005E1E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A48CD41FC061C1005E1E19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3833C641FC1A6CD0032590F /* PaperOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +60,7 @@
 		B3A48CB41FBFEE81005E1E19 = {
 			isa = PBXGroup;
 			children = (
+				B3833C631FC1A6CD0032590F /* PaperOnboarding.framework */,
 				B3A48CBF1FBFEE81005E1E19 /* 新北公車通 */,
 				B3A48CBE1FBFEE81005E1E19 /* Products */,
 			);
@@ -55,8 +78,10 @@
 			isa = PBXGroup;
 			children = (
 				B3A48CC01FBFEE81005E1E19 /* AppDelegate.swift */,
-				B3A48CC21FBFEE81005E1E19 /* ViewController.swift */,
 				B3A48CC41FBFEE81005E1E19 /* Main.storyboard */,
+				B3833C681FC1A77D0032590F /* OnboardingView.swift */,
+				B3833C661FC1A7410032590F /* WelcomeViewController.swift */,
+				B3A48CD41FC061C1005E1E19 /* TableViewController.swift */,
 				B3A48CC71FBFEE81005E1E19 /* Assets.xcassets */,
 				B3A48CC91FBFEE81005E1E19 /* LaunchScreen.storyboard */,
 				B3A48CCC1FBFEE81005E1E19 /* Info.plist */,
@@ -74,6 +99,7 @@
 				B3A48CB91FBFEE81005E1E19 /* Sources */,
 				B3A48CBA1FBFEE81005E1E19 /* Frameworks */,
 				B3A48CBB1FBFEE81005E1E19 /* Resources */,
+				B3833C5A1FC1A1BB0032590F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A48CC31FBFEE81005E1E19 /* ViewController.swift in Sources */,
+				B3833C671FC1A7410032590F /* WelcomeViewController.swift in Sources */,
+				B3833C691FC1A77D0032590F /* OnboardingView.swift in Sources */,
 				B3A48CC11FBFEE81005E1E19 /* AppDelegate.swift in Sources */,
+				B3A48CD51FC061C1005E1E19 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +290,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8D58TTN334;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage",
+				);
 				INFOPLIST_FILE = "新北公車通/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.codingonmac.steven.-----";
@@ -275,6 +308,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8D58TTN334;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage",
+				);
 				INFOPLIST_FILE = "新北公車通/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.codingonmac.steven.-----";
@@ -302,6 +340,7 @@
 				B3A48CD11FBFEE81005E1E19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
