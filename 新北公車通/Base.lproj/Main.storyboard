@@ -32,11 +32,18 @@
                             <outlet property="delegate" destination="Xb6-76-gOG" id="aGm-gq-4X5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AxC-qn-qyL"/>
+                    <navigationItem key="navigationItem" id="miq-92-3Vb">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;返回" id="HIx-4R-W6M">
+                            <color key="tintColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="4Bj-qB-oxF" kind="show" id="m0z-jV-eaK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udU-bm-IUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2385" y="-296"/>
+            <point key="canvasLocation" x="817" y="-464"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="m5h-iq-IXw">
@@ -62,7 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="S6E-hj-YZ7" kind="show" id="ONh-ti-hGG"/>
+                                    <segue destination="4Bj-qB-oxF" kind="show" id="0NP-rx-vD5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,28 +90,10 @@
             </objects>
             <point key="canvasLocation" x="-23" y="17"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YgP-JL-lE0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6E-hj-YZ7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wb0-8e-iF2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xb6-76-gOG" kind="relationship" relationship="rootViewController" id="Nns-tR-ddC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K23-sT-HD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1446" y="-296"/>
-        </scene>
-        <!--View Controller-->
+        <!--Menu Page View Controller-->
         <scene sceneID="u3a-2I-Xjq">
             <objects>
-                <viewController id="4Bj-qB-oxF" sceneMemberID="viewController">
+                <viewController id="4Bj-qB-oxF" customClass="MenuPageViewController" customModule="新北公車通" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SMP-O5-vyL"/>
                         <viewControllerLayoutGuide type="bottom" id="b5R-dW-3VD"/>
@@ -112,12 +101,134 @@
                     <view key="view" contentMode="scaleToFill" id="GXG-0f-3rb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eV-1H-k8h">
+                                <rect key="frame" x="16" y="72" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="一般公車路線">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="XFe-Jo-9Qj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-Jb-2h5">
+                                <rect key="frame" x="16" y="250" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="捷運先導">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="V1I-Pt-AxI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5O-ln-Rzw">
+                                <rect key="frame" x="16" y="428" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="新巴士">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="BdZ-7m-4uH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzv-Bs-wiB">
+                                <rect key="frame" x="16" y="606" width="170" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="風格">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4S-l5-ymw">
+                                <rect key="frame" x="189" y="606" width="170" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79470486110000005" green="0.79470486110000005" blue="0.79470486110000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="設定">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-Rt-D4I">
+                                <rect key="frame" x="189" y="250" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="捷運線">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="4ns-RR-87W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8g-B1-vUf">
+                                <rect key="frame" x="189" y="72" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="快速公車">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="6cA-3S-KGc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YD-Ul-gCy">
+                                <rect key="frame" x="189" y="428" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35807556569999999" green="0.83108428030000003" blue="0.6847914517" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="跳蛙路線">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRouteButton:" destination="4Bj-qB-oxF" eventType="touchUpInside" id="MSh-Bz-Nkx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="jumpBusRoute" destination="5YD-Ul-gCy" id="ofE-Fs-gVh"/>
+                        <outlet property="mrtFirstRoute" destination="kgN-Jb-2h5" id="qiB-UF-o5a"/>
+                        <outlet property="mrtRoute" destination="fd7-Rt-D4I" id="19s-js-dAZ"/>
+                        <outlet property="newBusRoute" destination="v5O-ln-Rzw" id="xo0-1G-cvw"/>
+                        <outlet property="rapidBusRoute" destination="V8g-B1-vUf" id="WMd-cZ-P4v"/>
+                        <outlet property="standardRoute" destination="5eV-1H-k8h" id="f5A-lx-Xgb"/>
+                        <segue destination="BvL-5G-Vrn" kind="show" identifier="tableViewControllerSegue" id="44e-qq-f5H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szN-Qn-JoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="351"/>
+            <point key="canvasLocation" x="817" y="262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7rK-9e-Z3r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BvL-5G-Vrn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XJv-G6-CjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xb6-76-gOG" kind="relationship" relationship="rootViewController" id="QSu-nl-QSR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9GJ-mM-2hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-465"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0NP-rx-vD5"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,7 @@
 		B3A48CC81FBFEE81005E1E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A48CC71FBFEE81005E1E19 /* Assets.xcassets */; };
 		B3A48CCB1FBFEE81005E1E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A48CC91FBFEE81005E1E19 /* LaunchScreen.storyboard */; };
 		B3A48CD51FC061C1005E1E19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A48CD41FC061C1005E1E19 /* TableViewController.swift */; };
+		B3EBE2901FCAE97B00D3084E /* MenuPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBE28F1FCAE97B00D3084E /* MenuPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		B3A48CCA1FBFEE81005E1E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A48CCC1FBFEE81005E1E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A48CD41FC061C1005E1E19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B3EBE28F1FCAE97B00D3084E /* MenuPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				B3A48CC01FBFEE81005E1E19 /* AppDelegate.swift */,
 				B3A48CC41FBFEE81005E1E19 /* Main.storyboard */,
+				B3EBE28F1FCAE97B00D3084E /* MenuPageViewController.swift */,
 				B3833C681FC1A77D0032590F /* OnboardingView.swift */,
 				B3833C661FC1A7410032590F /* WelcomeViewController.swift */,
 				B3A48CD41FC061C1005E1E19 /* TableViewController.swift */,
@@ -165,6 +168,7 @@
 			files = (
 				B3833C671FC1A7410032590F /* WelcomeViewController.swift in Sources */,
 				B3833C691FC1A77D0032590F /* OnboardingView.swift in Sources */,
+				B3EBE2901FCAE97B00D3084E /* MenuPageViewController.swift in Sources */,
 				B3A48CC11FBFEE81005E1E19 /* AppDelegate.swift in Sources */,
 				B3A48CD51FC061C1005E1E19 /* TableViewController.swift in Sources */,
 			);
