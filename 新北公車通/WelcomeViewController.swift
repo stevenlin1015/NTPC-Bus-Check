@@ -17,8 +17,10 @@ class WelcomeViewController: UIViewController, PaperOnboardingDataSource, PaperO
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         onBoardingView.dataSource = self
         onBoardingView.delegate = self
+        
         
     }
 
